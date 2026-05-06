@@ -33,7 +33,6 @@ console.log(result2);
 
 
 //Problem - 3
-
 type StringOrNumber = number | string;
 
 function checkType (input: StringOrNumber) : string {
@@ -48,3 +47,53 @@ const result4 = checkType('Hello');
 
 console.log(result3);
 console.log(result4);
+
+
+
+
+//Problem 4
+function getProperty <T, K extends keyof T> (userKey:T, userInfo:K ):T[K] {
+    return userKey[userInfo];
+}
+
+const user = { 
+    id: 1,
+    name: "John Doe", 
+    age: 21 
+};
+
+const result5 = getProperty(user,'name');
+console.log(result5);
+
+
+
+
+//Problem 5
+interface Book{
+    title: string;
+    author: string;
+    publishedYear: number;
+}
+
+const myBook =
+ { 
+    title: "TypeScript Guide",
+    author: "Jane Doe", 
+    publishedYear: 2024 
+};
+
+
+function toggleReadStatus (book:Book){
+    return{
+        ...book,
+        isRead: true,
+    };
+};
+
+console.log(toggleReadStatus(myBook));
+
+
+
+
+//Problem 6
+
