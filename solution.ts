@@ -3,13 +3,13 @@ const arr: number [] = [1,2,3,4,5,6];
 
 function filterEvenNumbers(nums: number[]): number[] {
     
-    return nums.filter(nums => nums %2 ==0);
+    return nums.filter(nums => nums %2 ===0);
     
 };
 
-const result = filterEvenNumbers(arr);
+// const result = filterEvenNumbers(arr);
 
-console.log(result);
+// console.log(result);
 
 
 
@@ -26,8 +26,8 @@ function reverseString( exp : string): string {
     return reverseexp;
 };
 
-const result2 = reverseString(sample);
-console.log(result2);
+// const result2 = reverseString(sample);
+// console.log(result2);
 
 
 
@@ -42,11 +42,11 @@ function checkType (input: StringOrNumber) : string {
         return `Number`;
 };
 
-const result3 = checkType(42);
-const result4 = checkType('Hello');
+// const result3 = checkType(42);
+// const result4 = checkType('Hello');
 
-console.log(result3);
-console.log(result4);
+// console.log(result3);
+// console.log(result4);
 
 
 
@@ -62,8 +62,8 @@ const user = {
     age: 21 
 };
 
-const result5 = getProperty(user,'name');
-console.log(result5);
+// const result5 = getProperty(user,'name');
+// console.log(result5);
 
 
 
@@ -75,12 +75,12 @@ interface Book{
     publishedYear: number;
 }
 
-const myBook =
- { 
-    title: "TypeScript Guide",
-    author: "Jane Doe", 
-    publishedYear: 2024 
-};
+// const myBook =
+//  { 
+//     title: "TypeScript Guide",
+//     author: "Jane Doe", 
+//     publishedYear: 2024 
+// };
 
 
 function toggleReadStatus (book:Book){
@@ -90,7 +90,7 @@ function toggleReadStatus (book:Book){
     };
 };
 
-console.log(toggleReadStatus(myBook));
+// console.log(toggleReadStatus(myBook));
 
 
 
@@ -114,13 +114,13 @@ class Student extends Person{
         this.grade = grade;
     }
 
-    getDetails(){
-        console.log(`Name: ${this.name}, Age: ${this.age}, Grade:${this.grade}`);
+    getDetails(): string{
+        return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
     };
 };
 
-const student = new Student("Alice", 20, "A");
-student.getDetails();
+// const student = new Student("Alice", 20, "A");
+// student.getDetails();
 
 
 
@@ -139,4 +139,4 @@ function getIntersection(arr1:number[], arr2:number[]):number[]{
     return arr3;
 };
 
-console.log(getIntersection([1, 2, 3, 4, 5],[3, 4, 5, 6, 7]));
+// console.log(getIntersection([1, 2, 3, 4, 5],[3, 4, 5, 6, 7]));
