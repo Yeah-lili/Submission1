@@ -123,3 +123,20 @@ const student = new Student("Alice", 20, "A");
 student.getDetails();
 
 
+
+
+//Problem 7
+function getIntersection(arr1:number[], arr2:number[]):number[]{
+    let arr3:number[]=[];
+    for (let i =0; i<arr1.length;i++){
+        for (let j = 0; j<arr2.length;j++){
+            if (arr1[i]===arr2[j]){
+                arr3.push(arr2[j]);
+            };
+        };
+    };
+
+    return arr3;
+};
+
+console.log(getIntersection([1, 2, 3, 4, 5],[3, 4, 5, 6, 7]));
